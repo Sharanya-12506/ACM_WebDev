@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sharanya Yelluru - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fef6f0;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f7caca;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 5px solid #cdb4db;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #9cadce;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #cdb4db;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f7caca;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      z-index: 1;
+      border-radius: 10px;
+      min-width: 180px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: #444;
+      margin: 8px 0;
+    }
+
+    .dropdown-content a i {
+      margin-right: 8px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .fab.fa-youtube{
+        color: hsl(0, 100%, 50%);
+    }
+    .fab.fa-spotify{
+        color: hsl(113, 71%, 42%);
+    }
+    .fab.fa-pinterest{
+        color: hsl(0, 100%, 35%);
+    }
+
+    .main-content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 20px auto 30px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #cdb4db;
+      object-fit: cover;
+    }
+
+    h2 {
+      color: #9cadce;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #cdb4db;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f7caca;
+    }
+
+    td {
+      background-color: #fffaf5;
+    }
+
+    .section h2{
+        color: #9cadce;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #f7caca;
+      margin-top: 60px;
+    }
+
+    .contact-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9cadce;
+      font-weight: bold;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-links i {
+      margin-right: 6px;
+    }
+
+    .fas.fa-envelope{
+        color: rgb(129, 166, 239)
+    }
+    
+    .fab.fa-instagram{
+        color: rgb(203, 10, 81);
+    }
+
+    .fab.fa-github{
+        color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Sharanya Yelluru</h1>
+    <p>Coder 👩‍💻 | Music Lover 🎶</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+
+    <div class="dropdown">
+      <a href="#">Fav Sites ▼</a>
+      <div class="dropdown-content">
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+        <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+        <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i>Pinterest</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <img src="WebDev/html/images/profilepic.jpeg" alt="Profile Pic" class="profile-img">
+
+    <div class="section" id="about">
+        <p>
+            <b>Hello!</b><br>
+             I'm Sharanya, a first yr B.Tech student in CSFT at MIT. I'm someone who loves coding,music, tech, and meaningful conversations.
+        </p>
+    </div>
+
+    <div class="section" id="hobbies">
+        <h2>My Hobbies & Interests</h2>
+        <ol>
+          <li>Singing 🎤</li>
+          <li>Badminton 🏸</li>
+          <li>Reading 📚</li>
+          <li>Coding 💻</li>
+        </ol>
+      </div>
+
+    <div class="section" id="projects">
+        <h2>Projects</h2>
+        <ol class="projects">
+          <li>Music Playlist Generator 🎵</li>
+          <li>This website 😬</li>
+          <li>Thinking of ideas #1 🧠</li>
+          <li>Thinking of ideas #2 🧠</li>
+        </ol>
+      </div>
+
+    <div class="section" id="skills">
+        <h2><center>My Skills</center></h2>
+        <table>
+          <tr>
+            <th>Skill</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>HTML and CSS</td>
+            <td>Learning</td>
+          </tr>
+          <tr>
+            <td>React</td>
+            <td>Yet to start</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>Git & GitHub</td>
+            <td>Learning</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Intermediate</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Fun fact 😛</h2>
+      <p>I drink H<sub>2</sub>O and believe in E = mc<sup>2</sup>! </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="contact-links">
+      <a href="mailto:sharanya@example.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="https://instagram.com/a_really_shy_uranus" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://github.com/sharanya-12506" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+    </div>
+    <p style="margin-top:10px;">Author: Sharanya Yelluru | © 2025</p>
+  </footer>
+
+</body>
+</html>
