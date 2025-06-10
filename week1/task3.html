@@ -10,6 +10,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fef6f0;
       color: #444;
+      line-height: 1.6;
     }
 
     header {
@@ -30,7 +31,6 @@
       margin-top: 10px;
     }
 
-    /* Navbar Styling */
     nav {
       background-color: #cdb4db;
       padding: 15px 0;
@@ -79,7 +79,8 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .fa-brands.fa-youtube.fa-s{
+
+    .fab.fa-youtube{
         color: hsl(0, 100%, 50%);
     }
     .fab.fa-spotify{
@@ -89,9 +90,15 @@
         color: hsl(0, 100%, 35%);
     }
 
+    .main-content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
     .profile-img {
       display: block;
-      margin: 30px auto;
+      margin: 20px auto 30px;
       width: 180px;
       height: 180px;
       border-radius: 50%;
@@ -99,44 +106,23 @@
       object-fit: cover;
     }
 
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(205, 180, 219, 0.2);
-    }
-
-    .section h2 {
+    h2 {
       color: #9cadce;
-      border-bottom: 2px solid #f7caca;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      margin-top: 40px;
     }
 
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 20px;
     }
 
     ul li {
-      background-color: #f7caca;
       margin: 10px 0;
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-    .projects li {
-      background-color: #cdb4db;
-      color: white;
-      font-weight: bold;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     table, th, td {
@@ -153,14 +139,18 @@
     }
 
     td {
-      background-color: #fef6f0;
+      background-color: #fffaf5;
+    }
+
+    .section h2{
+        color: #9cadce;
     }
 
     footer {
       text-align: center;
       padding: 25px;
       background-color: #f7caca;
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .contact-links a {
@@ -190,7 +180,6 @@
         color: black;
     }
   </style>
-  <script src="https://kit.fontawesome.com/0f7dcb7394.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -200,7 +189,7 @@
     <p>Coder 👩‍💻 | Music Lover 🎶</p>
   </header>
 
-  <!-- Navbar below header -->
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#hobbies">Hobbies</a>
@@ -210,79 +199,84 @@
     <div class="dropdown">
       <a href="#">Fav Sites ▼</a>
       <div class="dropdown-content">
-        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube fa-s"></i>YouTube</a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
         <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
         <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i>Pinterest</a>
       </div>
     </div>
   </nav>
 
-  <!-- Profile Image -->
-  <img src="WebDev/html/images/profilepic.jpeg" alt="Profile Pic" class="profile-img">
+  <!-- Main Content -->
+  <div class="main-content">
+    <img src="WebDev/html/images/profilepic.jpeg" alt="Profile Pic" class="profile-img">
 
-  <!-- About Section -->
-  <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm Sharanya, an engineering student who loves blending logic with creativity. Whether it’s solving coding problems or getting lost in music, I always find joy in learning new things and expressing myself.</p>
+    <div class="section" id="about">
+        <p>
+            <b>Hello!</b><br>
+             I'm Sharanya, a first yr B.Tech student in CSFT at MIT. I'm someone who loves coding,music, tech, and meaningful conversations.
+        </p>
+    </div>
+
+    <div class="section" id="hobbies">
+        <h2>My Hobbies & Interests</h2>
+        <ol>
+          <li>Singing 🎤</li>
+          <li>Badminton 🏸</li>
+          <li>Reading 📚</li>
+          <li>Coding 💻</li>
+        </ol>
+      </div>
+
+    <div class="section" id="projects">
+        <h2>Projects</h2>
+        <ol class="projects">
+          <li>Music Playlist Generator 🎵</li>
+          <li>This website 😬</li>
+          <li>Thinking of ideas #1 🧠</li>
+          <li>Thinking of ideas #2 🧠</li>
+        </ol>
+      </div>
+
+    <div class="section" id="skills">
+        <h2><center>My Skills</center></h2>
+        <table>
+          <tr>
+            <th>Skill</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>HTML and CSS</td>
+            <td>Learning</td>
+          </tr>
+          <tr>
+            <td>React</td>
+            <td>Yet to start</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>Git & GitHub</td>
+            <td>Learning</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Intermediate</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Fun fact 😛</h2>
+      <p>I drink H<sub>2</sub>O and believe in E = mc<sup>2</sup>! </p>
   </div>
 
-  <!-- Hobbies Section -->
-  <div class="section" id="hobbies">
-    <h2>My Hobbies & Interests</h2>
-    <ol>
-      <li>Singing 🎤</li>
-      <li>Badminton 🏸</li>
-      <li>Reading 📚</li>
-      <li>Coding 💻</li>
-    </ol>
-  </div>
-
-  <!-- Projects Section -->
-  <div class="section" id="projects">
-    <h2>Projects</h2>
-    <ul class="projects">
-      <li>Music Playlist Generator 🎵</li>
-      <li>This website 😬</li>
-      <li>Thinking of ideas #1 🧠</li>
-      <li>Thinking of ideas #2 🧠</li>
-    </ul>
-  </div>
-
-  <div class="section" id="skills">
-    <h2><center>My Skills</center></h2>
-    <table>
-      <tr>
-        <th>Skill</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>HTML and CSS</td>
-        <td>Learning</td>
-      </tr>
-      <tr>
-        <td>React</td>
-        <td>Yet to start</td>
-      </tr>
-      <tr>
-        <td>Python</td>
-        <td>Intermediate</td>
-      </tr>
-      <tr>
-        <td>Git & GitHub</td>
-        <td>Learning</td>
-      </tr>
-      <tr>
-        <td>Java</td>
-        <td>Intermediate</td>
-      </tr>
-    </table>
-  </div>
-
+  <!-- Footer -->
   <footer>
     <div class="contact-links">
       <a href="mailto:sharanya@example.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      <a href="https://instagram.com/a_really_shy_uranus" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://github.com/sharanya-12506" target="_blank"><i class="fab fa-github"></i>GitHub</a>
     </div>
     <p style="margin-top:10px;">Author: Sharanya Yelluru | © 2025</p>
   </footer>
