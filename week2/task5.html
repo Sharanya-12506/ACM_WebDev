@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Sharanya's Portfolio</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                blush: '#f7caca',
+                lavender: '#cdb4db',
+                periwinkle: '#9cadce',
+                mint: '#d1fae5',
+              }
+            }
+          }
+        }
+      </script>
+    </head>
+<body class="bg-blush font-sans text-gray-800">
+    
+
+      <header class="bg-lavender shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6 py-6">
+          <h1 class="text-3xl font-bold text-white">Sharanya 💫</h1>
+          <nav class="mt-4 lg:mt-0 flex space-x-6 text-white font-semibold">
+            <a href="#about" class="hover:text-periwinkle transition">About</a>
+            <a href="#projects" class="hover:text-periwinkle transition">Projects</a>
+            <a href="#skills" class="hover:text-periwinkle transition">Skills</a>
+            <a href="#fav" class="hover:text-periwinkle transition">Favorites</a>
+          </nav>
+        </div>
+      </header>
+    
+      <section id="about" class="flex flex-col items-center justify-center py-12 px-6 bg-mint text-center">
+        <img src="https://i.pinimg.com/originals/30/ce/9a/30ce9a69f674a4254cf18a1dca7fdc6a.gif" alt="profile" class="w-40 h-40 rounded-full border-4 border-lavender mb-4" />
+        <h2 class="text-2xl font-bold text-lavender">Hello!</h2>
+        <p class="max-w-xl mt-3 text-gray-700">I'm Sharanya, a first yr B.Tech student in CSFT at MIT. I'm someone who loves coding,music, tech, and meaningful conversations.</p>
+      </section>
+             
+    
+      <section class="py-10 px-6 text-center">
+        <h3 class="text-2xl font-semibold text-periwinkle mb-6"> My Hobbies</h3>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-700">
+          <span class="bg-white px-6 py-3 rounded-full shadow-md">🎤 Singing</span>
+          <span class="bg-white px-6 py-3 rounded-full shadow-md">📚 Reading</span>
+          <span class="bg-white px-6 py-3 rounded-full shadow-md">💻 Coding</span>
+          <span class="bg-white px-6 py-3 rounded-full shadow-md">🏸 Badminton</span>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-white py-12 px-6">
+        <h3 class="text-center text-2xl font-semibold text-periwinkle mb-10">✨ My Projects</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-mint p-6 rounded-xl shadow-md hover:scale-105 transition">
+            <h4 class="text-lg font-bold text-lavender">Music Playlist Generator 🎵</h4>
+            <p>Uses mood detection to build a playlist.</p>
+          </div>
+          <div class="bg-mint p-6 rounded-xl shadow-md hover:scale-105 transition">
+            <h4 class="text-lg font-bold text-lavender">Personal Portfolio 💻</h4>
+            <p>This site!</p>
+          </div>
+          <div class="bg-mint p-6 rounded-xl shadow-md hover:scale-105 transition">
+            <h4 class="text-lg font-bold text-lavender">Still thinking 💡</h4>
+            <p>Open to ideas</p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Skills Table -->
+      <section id="skills" class="py-12 px-6">
+        <h3 class="text-center text-2xl font-semibold text-periwinkle mb-8">📘 Skills I'm Learning</h3>
+        <div class="overflow-x-auto max-w-3xl mx-auto">
+          <table class="min-w-full bg-white border border-lavender rounded-xl">
+            <thead class="bg-lavender text-white">
+              <tr>
+                <th class="py-3 px-4">Skill</th>
+                <th class="py-3 px-4">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center border-t">
+                <td class="py-3 px-4">HTML & CSS</td>
+                <td class="py-3 px-4">Learning</td>
+              </tr>
+              <tr class="text-center border-t">
+                <td class="py-3 px-4">React</td>
+                <td class="py-3 px-4">Beginner</td>
+              </tr>
+              <tr class="text-center border-t">
+                <td class="py-3 px-4">Python</td>
+                <td class="py-3 px-4">Intermediate</td>
+              </tr>
+              <tr class="text-center border-t">
+                <td class="py-3 px-4">Tailwind CSS</td>
+                <td class="py-3 px-4">Learning</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    
+      <!-- Favorites Section -->
+<section id="fav" class="bg-periwinkle text-white py-12 px-6">
+    <h3 class="text-center text-2xl font-semibold mb-10">🌐 Favorite Websites</h3>
+    <div class="flex flex-wrap justify-center gap-12 text-2xl">
+      <a href="https://youtube.com" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+        <i class="fab fa-youtube text-red-600 mb-2"></i>
+        <span class="text-white text-base font-medium">YouTube</span>
+      </a>
+      <a href="https://spotify.com" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+        <i class="fab fa-spotify text-green-500 mb-2"></i>
+        <span class="text-white text-base font-medium">Spotify</span>
+      </a>
+      <a href="https://pinterest.com" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+        <i class="fab fa-pinterest text-pink-600 mb-2"></i>
+        <span class="text-white text-base font-medium">Pinterest</span>
+      </a>
+    </div>
+  </section>
+  
+    
+    <footer class="bg-pink-200 text-center py-6 mt-12">
+      <div class="space-x-6">
+        <a href="mailto:sharanya@example.com" class="text-indigo-600 font-semibold hover:underline">
+          <i class="fas fa-envelope mr-1 text-blue-500"></i>Email
+        </a>
+        <a href="https://instagram.com/a_really_shy_uranus" target="_blank" class="text-pink-600 font-semibold hover:underline">
+          <i class="fab fa-instagram mr-1"></i>Instagram
+        </a>
+        <a href="https://github.com/sharanya-12506" target="_blank" class="text-black font-semibold hover:underline">
+          <i class="fab fa-github mr-1"></i>GitHub
+        </a>
+      </div>
+      <p class="mt-4 text-sm text-gray-600">Author: Sharanya Yelluru | © 2025</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </body>
+</html>

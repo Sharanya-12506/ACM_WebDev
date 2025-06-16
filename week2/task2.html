@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3x2 Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffafc;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d291bc;
+      margin-bottom: 40px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+    }
+
+    .grid-item {
+      background-color: #ffe6f0;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.03);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .grid-item h3 {
+      margin: 0;
+      color: #b5838d;
+    }
+
+    .grid-item p {
+      color: #555;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Gallery</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?nature,1" alt="Nature 1">
+      <h3>Nature Love</h3>
+      <p>Greenery all around</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?books,study" alt="Books">
+      <h3>Book Worm</h3>
+      <p>Diving into fantasy</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?music,girl" alt="Music">
+      <h3>Music Time</h3>
+      <p>I love music</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?sunset" alt="Sunset">
+      <h3>Golden Hour</h3>
+      <p>Sunsets</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?coffee" alt="Coffee">
+      <h3>Coffee Love</h3>
+      <p>Caffeine , blah blah</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://source.unsplash.com/300x180/?city,night" alt="City Lights">
+      <h3>City Nights</h3>
+      <p>Dreams under city lights.</p>
+    </div>
+  </div>
+
+</body>
+</html>
