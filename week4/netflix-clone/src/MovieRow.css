@@ -1,0 +1,25 @@
+.movie-row {
+  padding: 20px;
+  text-align: left;
+}
+
+.movie-row h3 {
+  margin-left: 20px;
+}
+
+.movie-posters {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+  gap: 15px;
+}
+
+.poster {
+  height: 200px;
+  transition: transform 0.2s;
+  border-radius: 5px;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+}
