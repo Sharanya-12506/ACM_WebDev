@@ -79,7 +79,7 @@ body {
 
 .footer-section h4 {
   margin-bottom: 10px;
-  color: #f40612;
+  color: #00ffcc;
 }
 
 .footer-section ul {
@@ -151,4 +151,13 @@ body {
 .dropdown-content li:hover {
   background-color: #333;
   border-radius: 8px;
+}
+.about a {
+  color: #00ffcc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
 }

@@ -39,6 +39,16 @@ function App() {
           The Data Alchemists is an all-things-data club. We cover the entire spectrum of data science from Data Engineering to Analytics and Visualization to Machine Learning and Deep Learning. With the exponentially growing amount available data, the doors for many new areas in the field of Data Science have opened. Artificial Intelligence and Large Language Models are becoming an inseparable part of our lives.
           The aim of the club is to keep up with the pace and growth of the field of data science and provide to the students an opportunity to be a part of this domain. The club serves as a platform to learn new skills, leverage and improve existing skillset via projects and provide a means for collaboration between students with similar interests.
         </p>
+        <p>
+          Learn more about us on the official MIT Manipal page:{" "}
+          <a 
+            href="https://www.manipal.edu/mit/mit-experience/student-welfare/technical-clubs/TDA-Manipal.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            TDA - MIT Manipal
+          </a>
+        </p>
       </section>
 
       <footer className="footer">
