@@ -10,16 +10,20 @@
 .movie-posters {
   display: flex;
   overflow-x: scroll;
-  padding: 20px;
   gap: 15px;
+  padding: 20px;
 }
 
 .poster {
   height: 200px;
-  transition: transform 0.2s;
   border-radius: 5px;
+  transition: transform 0.3s;
 }
 
 .poster:hover {
   transform: scale(1.1);
+}
+
+.movie-posters::-webkit-scrollbar {
+  display: none;
 }

@@ -1,173 +1,254 @@
-/* ---------------- GLOBAL ---------------- */
+/* GLOBAL */
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #111;
-  color: #fff;
-}
-
-.App {
-  text-align: center;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  background: #111;
+  color: white;
 }
 
 /* ---------------- NAVBAR ---------------- */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #141414;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 0 48px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .logo {
-  height: 45px;
+  height: 32px;
 }
 
-.nav-links {
-  list-style: none;
+.nav-menu {
   display: flex;
-  gap: 25px;
-  margin: 0;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.nav-links li {
-  cursor: pointer;
-  font-size: 15px;
+.nav-menu li {
   color: #e5e5e5;
-  transition: color 0.25s ease-in-out;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-/* ⭐ Netflix Red Hover FIXED */
-.nav-links li:hover {
-  color: #e50914 !important;
+.nav-menu li.active {
+  color: #fff;
+  font-weight: 600;
 }
 
-/* ---------------- HERO SLIDESHOW ---------------- */
+.nav-menu li:hover {
+  color: rgb(224, 0, 0);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  height: 32px;
+  border-radius: 6px;
+  margin-right: 70px;
+}
+
+/* ---------------- HERO ---------------- */
 .hero-slider {
   position: relative;
-  width: 100%;
-  height: 75vh;
+  height: 85vh;
   overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.hero-slide-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1s ease-in-out;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  filter: brightness(55%);
+  filter: brightness(60%);
+}
+
+.hero-gradient {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.92), transparent);
 }
 
-.hero-slide-wrapper audio {
-  display: none;
+.hero-text {
+  position: absolute;
+  bottom: 22%;
+  left: 4%;
+  max-width: 650px;
 }
 
-/* ARROWS */
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 12px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.play-btn {
+  background: white;
+  color: black;
+  padding: 10px 28px;
+  border-radius: 4px;
+  border: none;
+}
+
+.info-btn {
+  background: rgba(109,109,110,0.7);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* ---------------- CUSTOM ARROWS ---------------- */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
   padding: 10px 18px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 10;
-  border-radius: 4px;
-  transition: 0.3s;
+  z-index: 20;
+  user-select: none;
+}
+
+.custom-prev {
+  left: 20px;
+}
+
+.custom-next {
+  right: 20px;
 }
 
 .arrow:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
-
-/* ---------------- MOVIE ROW ---------------- */
-.movie-row {
-  margin-left: 20px;
+/* ---------------- PAGINATION DOTS ---------------- */
+.swiper-pagination-bullet {
+  background: #fff !important;
 }
 
-.movie-row h2 {
-  font-size: 20px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  text-align: left;
+/* ---------------- MUTE BUTTON ---------------- */
+.mute-btn {
+  position: absolute;
+  bottom: 18%;
+  right: 3%;
+  padding: 10px 14px;
+  font-size: 22px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 25;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.25);
 }
 
-.movie-thumbnails {
+.mute-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* ---------------- INTRO VIDEO ---------------- */
+.tap-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
   display: flex;
-  gap: 15px;
-  overflow-x: scroll;
-  padding: 0 20px 20px;
-}
-
-.movie-thumbnails img {
-  width: 150px;
-  height: 225px;
-  object-fit: cover;
-  border-radius: 4px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  z-index: 9999;
   cursor: pointer;
 }
 
-.movie-thumbnails img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+.intro-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: black;
+  z-index: 9998;
+  display: block;
 }
 
-.movie-thumbnails::-webkit-scrollbar {
-  display: none;
+/* ---------------- MOVIE ROW ---------------- */
+.movie-row {
+  padding: 20px;
+}
+
+.movie-posters {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.poster {
+  height: 200px;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.poster:hover {
+  transform: scale(1.1);
 }
 
 /* ---------------- FOOTER ---------------- */
 .footer {
-  background-color: #141414;
+  background: #141414;
   color: #757575;
   padding: 50px 20px;
-  font-size: 14px;
   text-align: center;
-  margin-top: 40px;
 }
 
 .footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0;
   display: flex;
+  gap: 11px;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 22px;
-}
-
-.footer-links li {
-  cursor: pointer;
-  transition: color 0.3s;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-links li:hover {
-  color: #fff;
-}
-
-.footer-credit {
-  margin-top: 20px;
-  color: #555;
-  font-size: 12px;
+  color: white;
 }
